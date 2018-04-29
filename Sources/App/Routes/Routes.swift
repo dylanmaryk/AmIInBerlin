@@ -8,7 +8,7 @@ extension Droplet {
                 let lng = req.parameters["lng"]?.double else {
                     throw Abort.badRequest
             }
-            guard let key = self.config["keys", "google-maps-api-key"]?.string else {
+            guard let key = self.config["keys", "google-maps-geocoding-api-key"]?.string else {
                 throw Abort.serverError
             }
             let res = try self.client.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=\(lat),\(lng)&key=\(key)")
