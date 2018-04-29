@@ -3,7 +3,7 @@ import Vapor
 extension Droplet {
     
     func setupRoutes() throws {
-        get("am_i_in_berlin", ":lat", ":lng") { req in
+        get("/", ":lat", ":lng") { req in
             guard let lat = req.parameters["lat"]?.double,
                 let lng = req.parameters["lng"]?.double else {
                     throw Abort.badRequest
