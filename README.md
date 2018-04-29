@@ -1,6 +1,6 @@
 # AmIInBerlin
 
-You must include a Google Maps API key in **Config/secrets/keys.json** in the following format:
+You must include a Google Maps Geocoding API key in **Config/secrets/keys.json** in the following format:
 
 ```
 {
